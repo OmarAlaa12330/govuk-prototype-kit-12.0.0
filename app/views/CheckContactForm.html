@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="ContactUsForm">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "Name"
+              },
+              value: {
+                text: data["full-name"]
+              },
+              actions:{
+                items:[
+                  {
+                    html: "Change",
+                    href: "ContactUsForm",
+                    visuallyHiddenText: "Full Name"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Email"
+              },
+              value: {
+                text: data["email"]
+              },
+              actions:{
+                items:[
+                  {
+                    html: "Change",
+                    href: "ContactUsForm",
+                    visuallyHiddenText: "Email Address"
+                  }
+                ]
+              }
+            },{
+              key: {
+                text: "Enquiry"
+              },
+              value: {
+                text: data["enquiry"]
+              },
+              actions:{
+                items:[
+                  {
+                    html: "Change",
+                    href: "ContactUsForm",
+                    visuallyHiddenText: "Enquiry"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+
+      </form>
+
+      <section>
+      <img src="" alt= "profile pic" />
+      <a href="https://intranet.dft.gov.uk/users/omarhussaingovuk" >Omar</a>
+      
+      </section>
+
+
+    </div>
+  </div>
+{% endblock %}

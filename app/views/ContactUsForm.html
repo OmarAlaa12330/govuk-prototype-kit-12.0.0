@@ -15,9 +15,13 @@
           id: "full-name",
           name: "full-name",
           value: data["full-name"],
+          pattern: "[A-Z a-z]*",
+          hint: {
+            text : "It must contain only letters"
+          },
           label: {
             html: "Please enter your full name",
-            classes: "govuk-label--l",
+            classes: "govuk-label--m",
             isPageHeading: false
           }
         }) }}
@@ -26,10 +30,12 @@
           id: "email",
           name: "email",
           value: data["email"],
+          type: "email",
+          autocomplete: "email",
+          spellcheck: "false",
           label: {
             html: "Please enter your email",
-            classes: "govuk-label--l",
-            isPageHeading: false
+            classes: "govuk-label--m"
           }
         }) }}
 
@@ -39,7 +45,7 @@
           value: data["enquiry"],
           label: {
             text: "Please write your enquiry in the box below",
-            classes: "govuk-label--l",
+            classes: "govuk-label--m",
             isPageHeading: false
           }
         }) }}
@@ -50,7 +56,17 @@
         
       </form>
 
+      <section style="display:flex; flex-direction:column">
+      <img src="" alt= "profile pic" />
+      <a href="https://intranet.dft.gov.uk/users/omarhussaingovuk" >Omar</a>
+      
+      </section>
+
     </div>
+    
+  </div>
   </div>
 
 {% endblock %}
+
+

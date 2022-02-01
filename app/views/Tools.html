@@ -1,30 +1,32 @@
-{% extends "layout.html" %}
-
-{% block pageTitle %}
-  Question page
-{% endblock %}
-
+{% extends "layout.html" %} {% block pageTitle %} Question page {% endblock %}
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/">Back</a>
-{% endblock %}
+<a class="govuk-back-link" href="/">Back</a>
+{% endblock %} {% block content %}
 
-{% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Tools</h1>
 
-      <h1 class="govuk-heading-l">
-        Tools
-      </h1>
+    <p>
+      As a business analyst, you are required to provide data and flowcharts to
+      others in order to assist with the stakeholder requirements
+    </p>
 
-      <p>
-        As a business analyst, you are required to provide data and flowcharts to others in order to
-        assist with the stakeholder requirements
-      </p>
-
-      <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p>
-
-    </div>
+    <p>
+      This paragraph has a link to
+      <a href="/url/of/onward/page">find out more about this subject</a>.
+    </p>
   </div>
+
+  
+  <div class="govuk-grid-column-one-third">
+    <div style="border: solid 1px grey; padding: 10px; margin-bottom: 12px">
+    <img style = "width: 100%" src="https://logos-world.net/wp-content/uploads/2021/02/Microsoft-Office-365-Logo-700x394.png"/>
+     
+    </div>
+  
+  </div>
+</div>
 
 {% endblock %}

@@ -1,0 +1,22 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-s">Communication is key</h1>
+  <p>
+  
+  <br/>
+    Examples of these platforms: 
+  </p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <img style = "width: 100%" src="https://logos-world.net/wp-content/uploads/2021/02/Microsoft-Office-365-Logo-700x394.png"/>
+  </div>
+</div>
+
+    <img style = "width: 100%" src="https://logos-world.net/wp-content/uploads/2021/02/Microsoft-Office-365-Logo-700x394.png"/>
+
+
+
+<p>
+      This paragraph has a link to
+      <a href="/url/of/onward/page">find out more about this subject</a>.
+    </p>
